@@ -4,6 +4,7 @@
       document.body.mozCancelFullScreen();
     } else {
       document.body.mozRequestFullScreen();
+      document.body.style.overflow = "auto";
     }
   }
 
