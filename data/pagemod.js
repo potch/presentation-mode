@@ -1,10 +1,9 @@
 (function () {
   function toggleFullScreen() {
     if (window.fullScreen) {
-      document.body.mozCancelFullScreen();
+      document.documentElement.mozCancelFullScreen();
     } else {
-      document.body.mozRequestFullScreen();
-      document.body.style.overflow = "auto";
+      document.documentElement.mozRequestFullScreen();
     }
   }
 
@@ -18,6 +17,6 @@
   item.addEventListener('click', toggleFullScreen);
 
   menu.appendChild(item);
-  document.body.appendChild(menu);
-  document.body.setAttribute('contextmenu', 'fsmenu');
+  document.documentElement.appendChild(menu);
+  document.documentElement.setAttribute('contextmenu', 'fsmenu');
 })();
